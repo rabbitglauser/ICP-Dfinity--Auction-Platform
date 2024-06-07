@@ -107,21 +107,22 @@ function AuctionDetail() {
     }
 
     const showHistory = () => {
-        return (<div className="section">
-            <h2>History</h2>
-            <table className='bid-table'>
-                <thead>
-                    <tr>
-                        <th>Price</th>
-                        <th>Time after start</th>
-                        <th>Originator</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {historyElements}
-                </tbody>
-            </table>
-        </div>
+        return (
+            <div className="section">
+                <h2>History</h2>
+                <table className='bid-table'>
+                    <thead>
+                        <tr>
+                            <th>Price</th>
+                            <th>Time after start</th>
+                            <th>Originator</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {historyElements}
+                    </tbody>
+                </table>
+            </div>
         );
     }
 
@@ -163,6 +164,10 @@ function AuctionDetail() {
                         <p>{currentBid.time.toString()} seconds after start</p>
                     </div>
                 }
+                <div className="section">
+                    <h2>Remaining Time</h2>
+                    <p>{auctionDetails.remainingTime.toString()} seconds</p>
+                </div>
                 {!isClosed &&
                     showBidForm()
                 }
