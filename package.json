@@ -9,7 +9,8 @@
     "frontend": "vite --port 3000",
     "backend": "mo-dev --generate --deploy -y",
     "build": "tsc && vite build",
-    "format": "prettier --write \"src/**/*.{json,js,jsx,ts,tsx,css,scss}\" \"src/motoko_backend/**/*.mo\""
+    "format": "prettier --write \"src/**/*.{json,js,jsx,ts,tsx,css,scss}\" \"src/motoko_backend/**/*.mo\"",
+    "deploy:playground": "dfx deploy --network playground"
   },
   "dependencies": {
     "react": "^18.2.0",
